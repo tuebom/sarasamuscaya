@@ -1,8 +1,45 @@
 /* FASTGAP https://github.com/GustavoCostaW/FastGap */
 /* CUSTOMIZE YOUR APP */
 
+@font-face {
+    font-family: "Source Sans";
+    src: url(../font/SourceSansPro-Regular.otf);
+}
+
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Source Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+#toolbar {
+  background: #536ea7;
+  border-bottom: 1px solid #111b32;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: 44px;
+}
+
+#toolbar h1 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  right: 44px;
+  left: 44px;
+  width: auto;
+  height: 44px;
+}
+
+#open-left {
+  background: url(../open.png) center center no-repeat;
+  display: block;
+  width: 44px;
+  height: 44px;
+}
 
 #menu ul li {
   color: #A02615;
@@ -22,7 +59,7 @@ body {
   font-size: 13px; }
 
 .title-page {
-  margin-top: 10px;
+  margin-top: 60px;
   font-size: 30px;
   color: #A02615;
   font-weight: bold;

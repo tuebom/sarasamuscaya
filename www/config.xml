@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.pwirya.sarasamuscaya"
+        id        = "com.tuebom.sarasamuscaya"
         version   = "1.0.0">
 
     <name>Sarasamuscaya</name>
@@ -12,7 +12,7 @@
         Sarasamuscaya app.
     </description>
 
-    <author href="https://github.com/pwirya/sarasamuscaya" email="tuebom.wirya@gmail.com">
+    <author href="https://github.com/tuebom/sarasamuscaya" email="tuebom.wirya@gmail.com">
         Putu Wirya
     </author>
 
@@ -36,12 +36,8 @@
     <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
-    <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-minSdkVersion"      value="14" />             <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-    <!--
-        Define a specific version of PhoneGap to build into your app.
-        <preference name="phonegap-version"       value="3.5.0" />
-    -->
 
     <!-- Plugins -->
 
@@ -53,9 +49,17 @@
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
     <!-- <plugin name="com.jsmobile.plugins.sms" source="git" spec="0.0.1" /> -->
+    <plugin name="cordova-plugin-admobpro" source="npm" />
+    <plugin name="cordova-plugin-splashscreen" source="npm" />
+    <plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
+    <splash src="splash.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
@@ -117,5 +121,4 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-
 </widget>
