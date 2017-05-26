@@ -9,7 +9,7 @@
     z-index: 2;
     position: relative;
 }
-.panel.panel-left.panel-cover {
+/*.panel.panel-left.panel-cover {
   left: -300px;
 }
 .panel.panel-left.panel-cover.active {
@@ -18,7 +18,7 @@
 body.with-panel-left-cover .panel-left {
     -webkit-transform: translate3d(300px, 0, 0);
     transform: translate3d(300px, 0, 0);
-}
+}*/
 .popover {
   width: 200px;
 }
