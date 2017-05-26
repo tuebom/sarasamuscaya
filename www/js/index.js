@@ -39,12 +39,12 @@ var app = {
 
         var idleTimer = null;
         var idleState = false;
-        var idleWait = 10000;
+        var idleWait = 30000;
  
         if( /(android)/i.test(navigator.userAgent) ) {
           admobid = { // for Android
             banner: 'ca-app-pub-8720755312345684/8407291456',
-            interstitial: 'ca-app-pub-8720755312345684/6790957451'
+            interstitial: 'ca-app-pub-xxxxxxxxxxxxx/oooooooooooo'
           };
         } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
           admobid = { // for iOS
