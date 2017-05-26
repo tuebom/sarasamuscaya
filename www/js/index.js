@@ -89,9 +89,9 @@ var app = {
                     
                     AdMob.createBanner( {
                       adId: admobid.banner,
-                      adSize: 'SMART_BANNER',
+                      adSize: 'BANNER',
                       position: AdMob.AD_POSITION.BOTTOM_CENTER,
-                      isTesting: true, // TODO: remove this line when release
+                      //isTesting: true, // TODO: remove this line when release
                       overlap: false,
                       offsetTopBar: false,
                       bgColor: 'black'

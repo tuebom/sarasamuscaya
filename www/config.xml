@@ -36,6 +36,7 @@
   
 
     <!-- Plugins -->
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
   <gap:plugin name="cordova-plugin-admobpro" source="npm" />
   <!--<gap:plugin name="cordova-plugin-console" source="npm" />
   <plugin name="cordova-plugin-splashscreen" source="npm" />
