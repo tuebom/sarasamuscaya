@@ -72,7 +72,7 @@ var app = {
               offsetTopBar: false,
               bgColor: 'black'
             } );
-        }, 10000);
+        }, 20000);
 
         /*$$(document).ready(function () {
     
@@ -120,7 +120,10 @@ var app = {
         app.receivedEvent('deviceready');
     },
     onBackButton: function() {
+      if (history.length > 0)
         mainView.router.back();
+      else
+        navigator.app.exitApp();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
