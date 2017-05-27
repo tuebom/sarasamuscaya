@@ -75,7 +75,7 @@ var app = {
             } );
         }, 5000);*/
 
-        $$(document).ready(function () {
+        //$$(document).ready(function () {
     
             $$('*').bind('mousemove keydown scroll', function () {
             
@@ -109,7 +109,7 @@ var app = {
             
             $$("body").trigger("mousemove");
         
-        });
+        //});
        
         // this will load a full screen ad on startup
         /*AdMob.prepareInterstitial({
