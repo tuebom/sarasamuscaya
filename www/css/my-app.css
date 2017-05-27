@@ -231,7 +231,7 @@ ICONS
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed; /*optimizeLegibility;*/
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
