@@ -27,7 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.addEventListener('backbutton', this.onBackButton, false);
+        //document.addEventListener('backbutton', this.onBackButton, false);
     },
     // deviceready Event Handler
     //
@@ -67,12 +67,12 @@ var app = {
               adId: admobid.banner,
               adSize: 'SMART_BANNER',
               position: AdMob.AD_POSITION.BOTTOM_CENTER,
-              isTesting: true, // TODO: remove this line when release
+              //isTesting: true, // TODO: remove this line when release
               overlap: false,
               offsetTopBar: false,
               bgColor: 'black'
             } );
-        }, 20000);
+        }, 5000);
 
         /*$$(document).ready(function () {
     
@@ -119,12 +119,12 @@ var app = {
 
         app.receivedEvent('deviceready');
     },
-    onBackButton: function() {
+    /*onBackButton: function() {
       if (history.length > 0)
         mainView.router.back();
       else
         window.close();
-    },
+    },*/
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);

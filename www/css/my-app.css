@@ -176,7 +176,7 @@ ARTICLE
 
 .intro {
   color: #212121;
-  font-weight: 500;
+  font-weight: 400;
   padding: 12px 0px;
   font-size: 18px;
   text-align: center;
@@ -231,7 +231,7 @@ ICONS
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
-  text-rendering: optimizeSpeed; /*optimizeLegibility;*/
+  text-rendering: optimizeLegibility;
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
