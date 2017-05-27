@@ -123,7 +123,7 @@ var app = {
       if (history.length > 0)
         mainView.router.back();
       else
-        navigator.app.exitApp();
+        window.close();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
