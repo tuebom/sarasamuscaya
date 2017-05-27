@@ -27,7 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        //document.addEventListener('backbutton', this.onBackButton, false);
+        document.addEventListener('backbutton', this.onBackButton, false);
     },
     // deviceready Event Handler
     //
@@ -38,9 +38,9 @@ var app = {
         // place our admob ad unit id here
         var admobid = {};
 
-        // var idleTimer = null;
-        // var idleState = false;
-        // var idleWait = 15000;
+        var idleTimer = null;
+        var idleState = false;
+        var idleWait = 5000;
  
         if( /(android)/i.test(navigator.userAgent) ) {
           admobid = { // for Android
@@ -59,7 +59,7 @@ var app = {
           };
         }
        
-        if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
+        /*if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
        
         setTimeout(function () {
             // this will create a banner on startup
@@ -72,9 +72,9 @@ var app = {
               offsetTopBar: false,
               bgColor: 'black'
             } );
-        }, 5000);
+        }, 5000);*/
 
-        /*$$(document).ready(function () {
+        $$(document).ready(function () {
     
             $$('*').bind('mousemove keydown scroll', function () {
             
@@ -92,7 +92,7 @@ var app = {
                     
                     AdMob.createBanner( {
                       adId: admobid.banner,
-                      adSize: 'BANNER',
+                      adSize: 'SMART_BANNER',
                       position: AdMob.AD_POSITION.BOTTOM_CENTER,
                       //isTesting: true, // TODO: remove this line when release
                       overlap: false,
@@ -108,7 +108,7 @@ var app = {
             
             $$("body").trigger("mousemove");
         
-        });*/
+        });
        
         // this will load a full screen ad on startup
         /*AdMob.prepareInterstitial({
@@ -119,12 +119,18 @@ var app = {
 
         app.receivedEvent('deviceready');
     },
-    /*onBackButton: function() {
-      if (history.length > 0)
+    onBackButton: function(e) {
+      var page = myApp.getCurrentView().activePage;
+      myApp.hidePreloader();
+      e.preventDefault();
+      if(page.name=="index") {
+        navigator.app.clearHistory();
+        navigator.app.exitApp();
+      } else {
+      //if (history.length > 0)
         mainView.router.back();
-      else
-        window.close();
-    },*/
+      }
+    },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
