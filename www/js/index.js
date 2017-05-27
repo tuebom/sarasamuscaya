@@ -16,6 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ 
+// place our admob ad unit id here
+var admobid = {};
+
+var idleTimer = null;
+var idleState = false;
+var idleWait = 5000;
+ 
 var app = {
     // Application Constructor
     initialize: function() {
@@ -35,13 +43,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
        
-        // place our admob ad unit id here
-        var admobid = {};
-
-        var idleTimer = null;
-        var idleState = false;
-        var idleWait = 5000;
- 
         if( /(android)/i.test(navigator.userAgent) ) {
           admobid = { // for Android
             banner: 'ca-app-pub-8720755312345684/8407291456',
