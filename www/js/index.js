@@ -38,9 +38,9 @@ var app = {
         // place our admob ad unit id here
         var admobid = {};
 
-        var idleTimer = null;
-        var idleState = false;
-        var idleWait = 15000;
+        // var idleTimer = null;
+        // var idleState = false;
+        // var idleWait = 15000;
  
         if( /(android)/i.test(navigator.userAgent) ) {
           admobid = { // for Android
@@ -61,28 +61,30 @@ var app = {
        
         if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
        
-        // this will create a banner on startup
-        /*AdMob.createBanner( {
-          adId: admobid.banner,
-          adSize: 'SMART_BANNER',
-          position: AdMob.AD_POSITION.BOTTOM_CENTER,
-          isTesting: true, // TODO: remove this line when release
-          overlap: false,
-          offsetTopBar: false,
-          bgColor: 'black'
-        } );*/
+        setTimeout(function () {
+            // this will create a banner on startup
+            AdMob.createBanner( {
+              adId: admobid.banner,
+              adSize: 'SMART_BANNER',
+              position: AdMob.AD_POSITION.BOTTOM_CENTER,
+              isTesting: true, // TODO: remove this line when release
+              overlap: false,
+              offsetTopBar: false,
+              bgColor: 'black'
+            } );
+        }, 10000);
 
-        $$(document).ready(function () {
+        /*$$(document).ready(function () {
     
             $$('*').bind('mousemove keydown scroll', function () {
             
                 clearTimeout(idleTimer);
                         
-                /*if (idleState == true) { 
+                if (idleState == true) { 
                     
                     // Reactivated event
                     //$$("body").append("<p>Welcome Back.</p>");            
-                }*/
+                }
                 
                 idleState = false;
                 
@@ -106,7 +108,7 @@ var app = {
             
             $$("body").trigger("mousemove");
         
-        });       
+        });*/
        
         // this will load a full screen ad on startup
         /*AdMob.prepareInterstitial({
