@@ -27,6 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('backbutton', this.onBackButton, false);
     },
     // deviceready Event Handler
     //
@@ -39,12 +40,12 @@ var app = {
 
         var idleTimer = null;
         var idleState = false;
-        var idleWait = 30000;
+        var idleWait = 15000;
  
         if( /(android)/i.test(navigator.userAgent) ) {
           admobid = { // for Android
             banner: 'ca-app-pub-8720755312345684/8407291456',
-            interstitial: 'ca-app-pub-xxxxxxxxxxxxx/oooooooooooo'
+            interstitial: 'ca-app-pub-8720755312345684/6790957451'
           };
         } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
           admobid = { // for iOS
@@ -77,11 +78,11 @@ var app = {
             
                 clearTimeout(idleTimer);
                         
-                if (idleState == true) { 
+                /*if (idleState == true) { 
                     
                     // Reactivated event
                     //$$("body").append("<p>Welcome Back.</p>");            
-                }
+                }*/
                 
                 idleState = false;
                 
@@ -105,7 +106,7 @@ var app = {
             
             $$("body").trigger("mousemove");
         
-        });
+        });       
        
         // this will load a full screen ad on startup
         /*AdMob.prepareInterstitial({
@@ -115,6 +116,9 @@ var app = {
         });*/
 
         app.receivedEvent('deviceready');
+    },
+    onBackButton: function() {
+        mainView.router.back();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

@@ -228,10 +228,11 @@ ICONS
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+  speak: none;
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+  text-rendering: auto; /*optimizeLegibility;*/
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */

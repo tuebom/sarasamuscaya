@@ -23,9 +23,9 @@ $$('a').on('click', function (e) { //Close panel when you open a new page
     myApp.closePanel();
 });
 
-$$('a.home').on('click', function (e) { //Close popover when you open a new page
-    myApp.closeModal('.popover-more-home');
-});
+// $$('a.home').on('click', function (e) { //Close popover when you open a new page
+    // myApp.closeModal('.popover-more-home');
+// });
 // $$('a.more').on('click', function (e) { //Close popover when you open a new page
     // myApp.closeModal('.popover-more');
 // });
