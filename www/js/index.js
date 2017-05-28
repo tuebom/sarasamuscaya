@@ -60,7 +60,7 @@ var app = {
           };
         }
        
-        /*if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
+        if ( AdMob ) //{ alert( 'admob plugin not ready' ); return; }
        
         setTimeout(function () {
             // this will create a banner on startup
@@ -73,9 +73,9 @@ var app = {
               offsetTopBar: false,
               bgColor: 'black'
             } );
-        }, 5000);*/
+        }, 60000);
 
-        //$$(document).ready(function () {
+        /*$$(document).ready(function () {
     
             $$('*').bind('mousemove keydown scroll', function () {
             
@@ -109,7 +109,7 @@ var app = {
             
             $$("body").trigger("mousemove");
         
-        //});
+        });*/
        
         // this will load a full screen ad on startup
         /*AdMob.prepareInterstitial({
