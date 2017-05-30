@@ -20,9 +20,9 @@
 // place our admob ad unit id here
 var admobid = {};
 
-var idleTimer = null;
-var idleState = false;
-var idleWait = 5000;
+// var idleTimer = null;
+// var idleState = false;
+// var idleWait = 5000;
  
 var app = {
     // Application Constructor
@@ -71,7 +71,7 @@ var app = {
               //isTesting: true, // TODO: remove this line when release
               overlap: false,
               offsetTopBar: false,
-              bgColor: 'black'
+              bgColor: 'white'
             } );
         }, 10000);
 
@@ -130,7 +130,7 @@ var app = {
       } else {
       //if (history.length > 0)
         mainView.router.back();
-        admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);//show banner at the top of app
+        Admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);//show banner at the top of app
       }
     },
     // Update DOM on a Received Event

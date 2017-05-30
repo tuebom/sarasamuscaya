@@ -19,7 +19,7 @@ var mainView = myApp.addView('.view-main', {
 // GENERAL
 
 $$('a').on('click', function (e) { //Close panel when you open a new page
-    Admob.hideBanner();
     myApp.closePanel();
+    Admob.hideBanner();
 });
 
