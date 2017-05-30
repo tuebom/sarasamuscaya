@@ -62,7 +62,7 @@ var app = {
        
         if ( AdMob ) //{ alert( 'admob plugin not ready' ); return; }
        
-        //setTimeout(function () {
+        setTimeout(function () {
             // this will create a banner on startup
             AdMob.createBanner( {
               adId: admobid.banner,
@@ -73,7 +73,7 @@ var app = {
               offsetTopBar: false,
               bgColor: 'black'
             } );
-        //}, 60000);
+        }, 10000);
 
         /*$$(document).ready(function () {
     
@@ -130,6 +130,7 @@ var app = {
       } else {
       //if (history.length > 0)
         mainView.router.back();
+        admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);//show banner at the top of app
       }
     },
     // Update DOM on a Received Event
