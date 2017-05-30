@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.tuebom.sarasamuscaya"
+        id        = "com.app.sarasamuscaya"
         version   = "1.0.0">
 
     <name>Sarasamuscaya</name>
@@ -36,15 +36,15 @@
   
 
     <!-- Plugins -->
-	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+	<!--<gap:plugin name="cordova-plugin-whitelist" source="npm" />-->
   <gap:plugin name="cordova-plugin-admobpro" source="npm" />
   <!--<gap:plugin name="cordova-plugin-console" source="npm" />
   <plugin name="cordova-plugin-splashscreen" source="npm" />
   <plugin name="cordova-plugin-x-socialsharing" source="npm" />
   <gap:plugin name="cordova-plugin-device" source="npm" />
-  <gap:plugin name="cordova-plugin-device-motion" source="npm" />-->
+  <gap:plugin name="cordova-plugin-device-motion" source="npm" />
   <gap:plugin name="cordova-plugin-device-orientation" source="npm" />
-  <!--<gap:plugin name="cordova-plugin-dialogs" source="npm" />
+  <gap:plugin name="cordova-plugin-dialogs" source="npm" />
   <gap:plugin name="cordova-plugin-media" source="npm" />
   <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
   <gap:plugin name="cordova-plugin-vibration" source="npm" />-->
