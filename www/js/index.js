@@ -62,7 +62,7 @@ var app = {
        
         if ( AdMob ) //{ alert( 'admob plugin not ready' ); return; }
        
-        setTimeout(function () {
+        //setTimeout(function () {
             // this will create a banner on startup
             AdMob.createBanner( {
               adId: admobid.banner,
@@ -73,7 +73,7 @@ var app = {
               offsetTopBar: false,
               bgColor: 'black'
             } );
-        }, 60000);
+        //}, 60000);
 
         /*$$(document).ready(function () {
     
