@@ -130,7 +130,7 @@ var app = {
       } else {
       //if (history.length > 0)
         mainView.router.back();
-        Admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);//show banner at the top of app
+        Admob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
       }
     },
     // Update DOM on a Received Event
